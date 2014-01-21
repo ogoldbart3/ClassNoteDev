@@ -42,13 +42,15 @@
             android:id="@+id/button1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/update" />
+            android:text="@string/update"
+        	android:onClick="login" />
 
         <Button
             android:id="@+id/button2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/cache" />
+            android:text="@string/cache"
+        	android:onClick="login" />
 
         <ProgressBar
             android:id="@+id/progressBar1"

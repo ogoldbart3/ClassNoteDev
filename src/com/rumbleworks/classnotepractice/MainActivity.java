@@ -4,6 +4,7 @@ import java.util.Locale;
 
 import android.app.ActionBar;
 import android.app.FragmentTransaction;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -163,6 +164,30 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
             dummyTextView.setText(Integer.toString(getArguments().getInt(ARG_SECTION_NUMBER)));
             return rootView;
         }
+    }
+    
+    @Override
+    public void onBackPressed() {
+        //start activity here
+    	Intent intent = new Intent();
+		
+		//arrayList.add(0, currentDishID);
+		//intent.putCharSequenceArrayListExtra("arrayList", arrayList);
+		
+		//intent.putExtra( "currentRestaurantID", currentRestaurantID );
+		//intent.putExtra( "currentFoodmenuID", currentFoodmenuID );
+		//intent.putExtra( "currentDishID", currentDishID );
+		
+		intent.setClass(MainActivity.this, UpdateActivity.class);
+
+		startActivity(intent);
+		finish();
+    	
+    	super.onBackPressed();
+        
+        
+
+
     }
 
 }

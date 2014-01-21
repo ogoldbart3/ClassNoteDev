@@ -2,7 +2,9 @@ package com.rumbleworks.classnotepractice;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.content.Intent;
 import android.view.Menu;
+import android.view.View;
 
 public class UpdateActivity extends Activity {
 
@@ -19,7 +21,22 @@ public class UpdateActivity extends Activity {
 		return true;
 	}
 	
-	
-	
+	public void login( View view ) {
 
+		Intent intent = new Intent();
+			
+		//arrayList.add(0, currentDishID);
+		//intent.putCharSequenceArrayListExtra("arrayList", arrayList);
+		
+		//intent.putExtra( "currentRestaurantID", currentRestaurantID );
+		//intent.putExtra( "currentFoodmenuID", currentFoodmenuID );
+		//intent.putExtra( "currentDishID", currentDishID );
+		
+		intent.setClass(UpdateActivity.this, MainActivity.class);
+
+		startActivity(intent);
+		finish();
+		
+	
+	}
 }
