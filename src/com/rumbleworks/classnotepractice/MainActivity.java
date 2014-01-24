@@ -126,8 +126,8 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
 	            args.putInt(CalendarSectionFragment.ARG_SECTION_NUMBER, position + 1);
             }
             if ( position == 2 ) {
-            	fragment = new AddSectionFragment();
-	            args.putInt(AddSectionFragment.ARG_SECTION_NUMBER, position + 1);
+            	fragment = new AnnouncementSectionFragment();
+	            args.putInt(AnnouncementSectionFragment.ARG_SECTION_NUMBER, position + 1);
             }
             fragment.setArguments(args);
             return fragment;
@@ -144,11 +144,11 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
             //Locale l = Locale.getDefault();
             switch (position) {
                 case 0:
-                    return "Upcoming";
+                    return "Upcoming Assignments";
                 case 1:
                     return "Calender";
                 case 2:
-                    return "Add";
+                    return "Announcements";
             }
             return null;
         }
@@ -202,20 +202,20 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
         }
     }
     
-    public static class AddSectionFragment extends Fragment {
+    public static class AnnouncementSectionFragment extends Fragment {
         /**
          * The fragment argument representing the section number for this
          * fragment.
          */
         public static final String ARG_SECTION_NUMBER = "section_number";
 
-        public AddSectionFragment() {
+        public AnnouncementSectionFragment() {
         }
 
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                 Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.fragment_add, container, false);
+            View rootView = inflater.inflate(R.layout.fragment_announcement, container, false);
             //TextView dummyTextView = (TextView) rootView.findViewById(R.id.section_label);
             //dummyTextView.setText(Integer.toString(getArguments().getInt(ARG_SECTION_NUMBER)));
             return rootView;

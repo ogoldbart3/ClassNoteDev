@@ -12,5 +12,6 @@
     <string name="cache">View Cached Assignments</string>
     <string name="username">Username</string>
     <string name="password">Password</string>
+    <string name="title_activity_add">Add</string>
 
 </resources>
